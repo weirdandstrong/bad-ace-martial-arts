@@ -251,19 +251,19 @@ a { color: inherit; }
 /* ---------- Shou Shu ---------- */
 .shoushu-lead { font-size: 20px; color: rgba(255,255,255,0.88); max-width: 820px; margin-bottom: 16px; }
 .shoushu-lead strong { color: var(--gold); }
-.beast-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 14px; margin-top: 38px; }
+.beast-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; margin-top: 30px; }
 .beast {
   background: var(--paper);
   color: var(--ink);
   border-radius: var(--radius-lg);
-  padding: 18px 10px 14px;
+  padding: 14px 8px 12px;
   text-align: center;
   border-bottom: 4px solid var(--red);
 }
-.beast svg { width: 100%; max-width: 92px; height: auto; display: block; margin: 0 auto 10px; }
+.beast svg { width: 100%; max-width: 76px; height: auto; display: block; margin: 0 auto 8px; }
 .beast h3 {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 21px;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -271,15 +271,42 @@ a { color: inherit; }
 .beast p {
   font-family: var(--font-cond);
   font-weight: 600;
-  font-size: 11.5px;
-  letter-spacing: 0.1em;
+  font-size: 11px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--red);
   margin-top: 4px;
 }
-.pull-quote { margin-top: 56px; border-left: 4px solid var(--gold); padding-left: 28px; }
+.pull-quote { margin-top: 44px; border-left: 4px solid var(--gold); padding-left: 28px; }
 .pull-quote p { font-family: var(--font-display); font-size: clamp(28px, 4vw, 46px); line-height: 1.05; text-transform: uppercase; }
 .pull-quote cite { font-family: var(--font-cond); font-style: normal; letter-spacing: 0.12em; text-transform: uppercase; font-size: 14px; color: var(--muted-dark); display: block; margin-top: 12px; }
+
+/* ---------- Jiu Jitsu ---------- */
+.jj-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center; }
+.jj-copy p { margin-bottom: 18px; }
+.jj-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+.jj-chips span {
+  font-family: var(--font-cond);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+  padding: 8px 14px;
+}
+.times-line {
+  font-family: var(--font-cond);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.times-line b { color: var(--red); }
+.jj-media img { border-radius: var(--radius-lg); height: 480px; width: 100%; object-fit: cover; }
 
 /* ---------- Programs ---------- */
 .program-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -498,9 +525,19 @@ a { color: inherit; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
-  .pathway-grid, .story-grid, .women-grid,
+  .pathway-grid, .story-grid, .women-grid, .jj-grid,
   .instructor-grid, .contact-grid { grid-template-columns: 1fr; }
-  .beast-grid { grid-template-columns: repeat(4, 1fr); }
+  .jj-media img { height: 340px; }
+  /* Beasts stay one row: horizontal swipe strip on smaller screens */
+  .beast-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding-bottom: 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .beast { flex: 0 0 128px; scroll-snap-align: start; }
   .story-grid, .women-grid, .instructor-grid { gap: 36px; }
   .program-grid { grid-template-columns: 1fr 1fr; }
   .review-grid, .steps-grid { grid-template-columns: 1fr; }
@@ -511,7 +548,6 @@ a { color: inherit; }
 
 @media (max-width: 640px) {
   .program-grid, .sched-grid { grid-template-columns: 1fr; }
-  .beast-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-ctas .btn { width: 100%; text-align: center; }
   .brand-loc { display: none; }
 
