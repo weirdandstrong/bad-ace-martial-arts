@@ -28,6 +28,7 @@ Locked decisions from Jeremy interview, 2026-07-13. This is the build contract.
    - Adult Martial Arts (Shou Shu) — Ages 18+
    - Kickboxing & Self-Defense — with a dedicated **women's self-defense** angle/section
    - Warriors & Weights — functional fitness
+   - Private Lessons & Personal Training — 1-on-1, by appointment
 3. Schedule — custom mobile-first weekly grid, driven by one editable data file (Jeremy maintains)
 4. Instructors/About — Alexis bio + studio story + Bad Ace lineage under Rodger; **placeholder drafts with [FILL IN] markers**, facts verified pre-launch
 5. FAQ — starting age, what to wear, sparring safety, trial process, pricing conversation
