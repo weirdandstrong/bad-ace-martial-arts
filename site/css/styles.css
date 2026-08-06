@@ -410,6 +410,17 @@ a { color: inherit; }
   font-family: var(--font-display); font-size: 16px;
 }
 
+.reviews-links {
+  margin-top: 28px;
+  font-family: var(--font-cond);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.reviews-links a { color: var(--red); text-decoration-color: var(--gold); }
+.reviews-links span { color: var(--gold); margin: 0 10px; }
+
 /* ---------- Instructor ---------- */
 .instructor-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; }
 .instructor-media img { border-radius: var(--radius-lg); height: 480px; width: 100%; object-fit: cover; }
