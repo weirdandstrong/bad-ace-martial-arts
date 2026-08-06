@@ -179,7 +179,7 @@ a { color: inherit; }
 /* ---------- Hero ---------- */
 .hero { position: relative; background: var(--ink); color: var(--white); overflow: hidden; }
 .hero-media { position: absolute; inset: 0; }
-.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; opacity: 0.55; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; opacity: 0.55; }
 .hero-scrim {
   position: absolute; inset: 0;
   background: linear-gradient(100deg, rgba(10,8,6,0.95) 25%, rgba(10,8,6,0.55) 60%, rgba(10,8,6,0.35) 100%);
