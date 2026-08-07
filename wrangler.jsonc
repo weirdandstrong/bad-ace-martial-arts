@@ -2,7 +2,7 @@
   // Cloudflare config — lets Cloudflare auto-configure the deploy when you
   // connect this repo (Workers & Pages → Create → import repository).
   // No build step: this is a static site served from /site.
-  "name": "badace-fm",
+  "name": "bad-ace-martial-arts",
   "compatibility_date": "2026-08-06",
   "assets": {
     "directory": "./site",
